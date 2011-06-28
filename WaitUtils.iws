@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0e7162-b19d-448a-98fe-5a056b75cdcc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/testing/Function.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/testing/WaitUtil.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/testing/WaitUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java" afterPath="$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java" />
     </list>
     <ignored path="WaitUtils.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +65,7 @@
       <file leaf-file-name="WaitUtilTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="28" selection-start="3945" selection-end="3945" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,7 +92,7 @@
       <file leaf-file-name="WaitUtil.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/testing/WaitUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="87" selection-start="2777" selection-end="2777" vertical-scroll-proportion="0.5931284">
+            <state line="95" column="42" selection-start="5906" selection-end="5906" vertical-scroll-proportion="0.8915009">
               <folding />
             </state>
           </provider>
@@ -223,6 +221,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
@@ -236,7 +235,7 @@
       <recent name="com.thoughtworks.testing" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WaitUtilTest.waitFor_shouldThrowAnExceptionWithAGoodMessage">
+  <component name="RunManager" selected="JUnit.WaitUtilTest">
     <configuration default="false" name="All in WaitUtils" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="WaitUtils" />
@@ -344,6 +343,34 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="WaitUtilTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="WaitUtils" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.testing" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.testing.WaitUtilTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -416,11 +443,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in WaitUtils" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.WaitUtilTest.waitFor_shouldReturnAsSoonAsTheFunctionReturnsAnObjectOfRequiredType" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.WaitUtilTest.waitFor_shouldWaitForAMaximumOfTimeoutWhenTheFunctionBombsOrReturnsNullIsFalse" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.WaitUtilTest.waitFor_shouldThrowAnExceptionWithAGoodMessage" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.WaitUtilTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -526,14 +554,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="28" selection-start="3945" selection-end="3945" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/testing/WaitUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="87" selection-start="2777" selection-end="2777" vertical-scroll-proportion="0.5931284">
+        <state line="95" column="42" selection-start="5906" selection-end="5906" vertical-scroll-proportion="0.8915009">
           <folding />
         </state>
       </provider>
