@@ -1,7 +1,6 @@
 package com.thoughtworks.testing;
 
 /**
- * @understands a collection of wait and assertion utils that gets rid off the need to explicitly wait using {@code Thread.sleep}.
  * <p/>
  * Typically functional tests need to wait for one or the other thing - may be clicking a link will do an ajax call which fetches
  * a bunch of text from a server. If you are manually testing this, you might have some sort of an indication - may be there is spinny
@@ -22,12 +21,15 @@ package com.thoughtworks.testing;
  * the naive Thread.sleep approach.
  * <p/>
  * In fact, if this util is used right, one should never write Thread.sleep in their functional tests. They should always do a targeted wait
+ *
+ * @understands a collection of wait and assertion utils that gets rid off the need to explicitly wait using {@code Thread.sleep}.
+ *
  */
 public class WaitUtil {
     public static void waitUntil(Timeout timeout, Predicate predicate) {
         long before = System.currentTimeMillis();
         while (true) {
-            bombIfTimesUp(timeout, before, predicate);
+            bombIfTimesUp(timeout, before, predicate.toString());
             try {
                 if (predicate.call()) return;
                 sleep(100);
@@ -36,9 +38,9 @@ public class WaitUtil {
         }
     }
 
-    private static void bombIfTimesUp(Timeout timeout, long before, Predicate predicate) {
+    private static void bombIfTimesUp(Timeout timeout, long before, String message) {
         if ((System.currentTimeMillis() - before) > timeout.time()) {
-            throw new RuntimeException("Wait timed out. Reason: " + predicate.toString());
+            throw new RuntimeException("Wait timed out. Reason: " + message);
         }
     }
 
@@ -47,6 +49,21 @@ public class WaitUtil {
             Thread.sleep(millis);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public static <T> T waitFor(Timeout timeout, Function<T> function) {
+        long before = System.currentTimeMillis();
+        while (true) {
+            bombIfTimesUp(timeout, before, function.toString());
+            try {
+                T value = function.call();
+                if (value != null) {
+                    return value;
+                }
+                sleep(100);
+            } catch (RuntimeException ignored) {
+            }
         }
     }
 }
