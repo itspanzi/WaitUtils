@@ -1,0 +1,6 @@
+<attribute name="Implementation-Title" value="${title}"/>
+<attribute name="Implementation-Version" value="${short_rev}"/>
+<attribute name="Implementation-Vendor" value="${vendor}"/>
+<attribute name="License" value="${license}"/>
+<attribute name="Description" value="${description}"/>
+<attribute name="Build-Date" value="${build-time-with-timezone}"/>

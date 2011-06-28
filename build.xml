@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE project [
+        <!ENTITY manifest SYSTEM "misc/manifest.xml">
+        <!ENTITY extension-name SYSTEM "misc/extension-name.xml">
+]>
+<project name="WaitUtils" basedir="." default="test">
+    <property name="src.dir" location="${basedir}/src"/>
+    <property name="test.dir" location="${basedir}/test"/>
+    <property name="lib.dir" location="${basedir}/lib"/>
+    <property name="test.lib.dir" location="${basedir}/test-lib"/>
+    <property name="target.dir" location="${basedir}/target"/>
+    <property name="src.classes.dir" location="${basedir}/target/classes/src"/>
+    <property name="test.classes.dir" location="${basedir}/target/classes/test"/>
+    <property name="test.reports.dir" location="${basedir}/target/reports"/>
+
+    <path id="lib.dependencies">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+
+    <path id="test.lib.dependencies">
+        <fileset dir="${test.lib.dir}" includes="*.jar"/>
+    </path>
+
+    <path id="src.classpath">
+        <path refid="lib.dependencies"/>
+    </path>
+
+    <path id="test.classpath">
+        <pathelement path="${src.classes.dir}" />
+        <path refid="src.classpath"/>
+        <path refid="test.lib.dependencies"/>
+    </path>
+
+    <path id="test.execution.classpath">
+        <pathelement path="${test.classes.dir}" />
+        <path refid="test.classpath"/>
+    </path>
+
+    <target name="clean">
+        <delete dir="${target.dir}" />
+    </target>
+
+    <target name="init">
+        <mkdir dir="${target.dir}" />
+        <mkdir dir="${src.classes.dir}" />
+        <mkdir dir="${test.classes.dir}" />
+        <mkdir dir="${test.reports.dir}" />
+    </target>
+
+    <target name="compile.src" depends="init">
+        <javac destdir="${src.classes.dir}" target="1.5" source="1.5" debug="true" includeantruntime="false">
+            <classpath refid="src.classpath"/>
+            <src path="${src.dir}"/>
+        </javac>
+    </target>
+
+    <target name="compile.test" depends="compile.src">
+        <javac destdir="${test.classes.dir}" target="1.5" source="1.5" debug="true" includeantruntime="false">
+            <classpath refid="test.classpath"/>
+            <src path="${test.dir}"/>
+        </javac>
+    </target>
+
+    <target name="compile" depends="compile.src, compile.test" />
+
+    <target name="test" depends="clean, compile.test">
+        <junit failureproperty="test.failure" printsummary="yes" haltonfailure="true" fork="true">
+            <classpath refid="test.execution.classpath"/>
+            <batchtest todir="${test.reports.dir}">
+                <fileset dir="${test.classes.dir}" includes="**/*Test.class*"/>
+                <formatter type="plain"/>
+            </batchtest>
+        </junit>
+    </target>
+</project>
