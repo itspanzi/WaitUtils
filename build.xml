@@ -2,8 +2,8 @@
 <!DOCTYPE project [
         <!ENTITY manifest SYSTEM "misc/manifest.xml">
         <!ENTITY extension-name SYSTEM "misc/extension-name.xml">
-]>
-<project name="WaitUtils" basedir="." default="test">
+        ]>
+<project name="WaitUtils" basedir="." default="package">
     <property name="src.dir" location="${basedir}/src"/>
     <property name="test.dir" location="${basedir}/test"/>
     <property name="lib.dir" location="${basedir}/lib"/>
@@ -12,6 +12,15 @@
     <property name="src.classes.dir" location="${basedir}/target/classes/src"/>
     <property name="test.classes.dir" location="${basedir}/target/classes/test"/>
     <property name="test.reports.dir" location="${basedir}/target/reports"/>
+
+    <target name="-load.short.rev">
+        <exec executable="git" outputproperty="short_rev">
+            <arg line="describe --always"/>
+        </exec>
+        <property name="basename" value="${target.dir}/waitutils-${short_rev}"/>
+        <property name="jar.name" value="${basename}.jar"/>
+        <property name="src.jar.name" value="${basename}-src.jar"/>
+    </target>
 
     <path id="lib.dependencies">
         <fileset dir="${lib.dir}" includes="*.jar"/>
@@ -26,25 +35,25 @@
     </path>
 
     <path id="test.classpath">
-        <pathelement path="${src.classes.dir}" />
+        <pathelement path="${src.classes.dir}"/>
         <path refid="src.classpath"/>
         <path refid="test.lib.dependencies"/>
     </path>
 
     <path id="test.execution.classpath">
-        <pathelement path="${test.classes.dir}" />
+        <pathelement path="${test.classes.dir}"/>
         <path refid="test.classpath"/>
     </path>
 
     <target name="clean">
-        <delete dir="${target.dir}" />
+        <delete dir="${target.dir}"/>
     </target>
 
     <target name="init">
-        <mkdir dir="${target.dir}" />
-        <mkdir dir="${src.classes.dir}" />
-        <mkdir dir="${test.classes.dir}" />
-        <mkdir dir="${test.reports.dir}" />
+        <mkdir dir="${target.dir}"/>
+        <mkdir dir="${src.classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${test.reports.dir}"/>
     </target>
 
     <target name="compile.src" depends="init">
@@ -61,7 +70,7 @@
         </javac>
     </target>
 
-    <target name="compile" depends="compile.src, compile.test" />
+    <target name="compile" depends="compile.src, compile.test"/>
 
     <target name="test" depends="clean, compile.test">
         <junit failureproperty="test.failure" printsummary="yes" haltonfailure="true" fork="true">
@@ -72,4 +81,18 @@
             </batchtest>
         </junit>
     </target>
+
+    <target name="package.bin.jar" depends="clean, test, -load.short.rev">
+        <jar destfile="${jar.name}">
+            <fileset dir="${src.classes.dir}"/>
+        </jar>
+    </target>
+
+    <target name="package.src.jar" depends="clean, test, -load.short.rev">
+        <jar destfile="${src.jar.name}">
+            <fileset dir="${src.dir}"/>
+        </jar>
+    </target>
+
+    <target name="package" depends="package.bin.jar, package.src.jar"/>
 </project>
