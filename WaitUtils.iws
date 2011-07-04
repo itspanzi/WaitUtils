@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0e7162-b19d-448a-98fe-5a056b75cdcc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.textile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WaitUtils.iml" afterPath="$PROJECT_DIR$/WaitUtils.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WaitUtils.ipr" afterPath="$PROJECT_DIR$/WaitUtils.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.textile" afterPath="$PROJECT_DIR$/README.textile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WaitUtils.iws" afterPath="$PROJECT_DIR$/WaitUtils.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java" afterPath="$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java" />
     </list>
     <ignored path="WaitUtils.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,10 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.textile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.textile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.textile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.57210964">
+            <state line="32" column="1" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.10727056">
               <folding />
             </state>
           </provider>
@@ -87,7 +94,7 @@
       <file leaf-file-name="WaitUtilTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,6 +150,7 @@
         <option value="$PROJECT_DIR$/README.markdown" />
         <option value="$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java" />
         <option value="$PROJECT_DIR$/README.textile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -234,18 +242,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="OverrideImplement.combined" value="true" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -592,14 +601,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.0">
+        <state line="38" column="0" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.textile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.57210964">
+        <state line="32" column="1" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.10727056">
           <folding />
         </state>
       </provider>

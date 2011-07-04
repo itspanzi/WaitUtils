@@ -18,7 +18,7 @@ WaitUtils solves this problem by providing APIs that internal does a retry after
 
 For example:
 
-@code@
+@
         WaitUtil.waitUntil(Timeout.TWENTY_SECONDS, new Predicate() {
 
             public boolean call() {
@@ -30,4 +30,4 @@ For example:
                 return "Some useful error message";
             }
         });
-@code@
+@
