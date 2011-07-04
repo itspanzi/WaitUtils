@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a0e7162-b19d-448a-98fe-5a056b75cdcc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.textile" afterPath="$PROJECT_DIR$/README.textile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WaitUtils.iws" afterPath="$PROJECT_DIR$/WaitUtils.iws" />
     </list>
     <ignored path="WaitUtils.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,19 +71,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.textile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.textile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.textile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="1" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
+            <state line="19" column="22" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.33969012">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.10727056">
+            <state line="6" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,8 +147,8 @@
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/README.markdown" />
         <option value="$PROJECT_DIR$/test/com/thoughtworks/testing/WaitUtilTest.java" />
-        <option value="$PROJECT_DIR$/README.textile" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.textile" />
       </list>
     </option>
   </component>
@@ -606,16 +604,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.textile">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="1" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/README.textile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.10727056">
+        <state line="19" column="22" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.33969012">
           <folding />
         </state>
       </provider>

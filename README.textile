@@ -16,18 +16,5 @@ h2. Solution
 
 WaitUtils solves this problem by providing APIs that internal does a retry after every 100 ms and does so until some condition is true.
 
-For example:
-
-@
-        WaitUtil.waitUntil(Timeout.TWENTY_SECONDS, new Predicate() {
-
-            public boolean call() {
-                //Do whatever one needs to wait for
-                return false;
-            }
-
-            public String toString() {
-                return "Some useful error message";
-            }
-        });
-@
+Checkout the API documentation on how to use the WaitUtils. All methods are static and follow the same philosophy as the JUnit asserts
+and hamcrest matchers.
